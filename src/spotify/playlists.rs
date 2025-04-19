@@ -30,7 +30,7 @@ pub async fn replace_playlists_items(
         if i == 0 {
             client
                 .playlists()
-                .replace_playlists_items(playlist_id, chunk)
+                .add_to_playlist(playlist_id, chunk)
                 .await?;
         } else {
             client
